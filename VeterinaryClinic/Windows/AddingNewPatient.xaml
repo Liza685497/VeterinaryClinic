@@ -1,0 +1,149 @@
+﻿<Window x:Class="VeterinaryClinic.Windows.AddingNewPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VeterinaryClinic.Windows"
+        mc:Ignorable="d"
+        Title="AddingNewPatient" Height="920" Width="1440">
+
+
+    <Grid  Background="#E2E4D9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="3"
+                Background="#D9DCD1"
+                CornerRadius="10"
+                Grid.Row="0"
+                Grid.RowSpan="7"
+                Margin="30"
+                />
+
+        <Border
+             Height="790" 
+            RenderTransformOrigin="0.5,0.5" 
+            Margin="-599,-303,140,115" 
+            Background="#D9DCD1" 
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="6">
+
+
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="136.253"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+
+        <TextBlock
+            Text="Добавление пациента"
+            Margin="60,60,0,117"
+            FontSize="40"
+            Foreground="#30615F"
+            FontFamily="Times New Roman"
+            Grid.ColumnSpan="2" 
+            Grid.RowSpan="2">
+
+        </TextBlock>
+        <StackPanel Grid.Row="0" Margin="30" Grid.RowSpan="7" Grid.Column="3">
+            <Image x:Name="IconUser_png" Source="../Images/IconUser.png" 
+               Width="120"
+               Grid.Column="3"
+               Grid.Row="0"  
+               />
+            <TextBlock
+            Text="Администратор"           
+            FontSize="32"
+            Margin="30"
+            Foreground="Black"
+            FontFamily="Times New Roman"
+            TextAlignment="Center"
+            />
+            <TextBlock
+            Text="Иванов Иван Иванович"
+            FontSize="24"
+            TextAlignment="Center"
+            Foreground="Black"
+            FontFamily="Montserrate"/>
+            <Calendar Margin="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.RowSpan="5">
+            <TextBlock Text="Хозяин" FontSize="24" Height="50" Margin="0 0 20 20"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="Кличка" FontSize="24" Height="50" Margin="0 0 20 20"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="Вид" FontSize="24" Height="50" Margin="0 0 20 20"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="Дата рождения" FontSize="24" Height="50" Margin="0 0 20 20"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="Пол" FontSize="24" Height="50" Margin="0 0 20 20"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="Другие данные" FontSize="24" Height="50" Margin="0 0 20 20"
+                       VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2" Margin="20 0 0 0" Grid.RowSpan="5">
+            <TextBox Style="{DynamicResource TextBoxStyle1}"
+                     Background="{x:Null}"
+                     BorderBrush="#027F93"
+                     Height="50" Margin="0 0 0 20"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}"
+                     Background="{x:Null}"
+                     BorderBrush="#027F93"
+                     Height="50" Margin="0 0 0 20"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}"
+                     Background="{x:Null}"
+                     BorderBrush="#027F93"
+                     Height="50" Margin="0 0 0 20"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}"
+                     Background="{x:Null}"
+                     BorderBrush="#027F93"
+                     Height="50" Margin="0 0 0 20"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}"
+                     Background="{x:Null}"
+                     BorderBrush="#027F93"
+                     Height="50" Margin="0 0 0 20"/>
+            <TextBox Style="{DynamicResource TextBoxStyle1}"
+                     Background="{x:Null}"
+                     BorderBrush="#027F93"
+                     Height="80" TextWrapping="Wrap"/>
+        </StackPanel>
+        <Button Style="{DynamicResource ButtonStyle2}" Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" 
+                Content="Добавить Пациента" FontSize="24" Foreground="White" Background="#7DBDC7" Height="73"
+                Width="300"/>
+
+        <Line Grid.Row="2" Grid.Column="1" 
+              HorizontalAlignment="Right" Grid.RowSpan="5"
+              Y1="0" Y2="400" Stroke="#027F93"/>
+        <Image x:Name="logoTipe_png" Source="../Images/logoTipe.png"
+                Width="100"
+               Grid.Column="0"
+               Grid.Row="6"
+               Margin="20,180,0,0" Grid.ColumnSpan="2" 
+               HorizontalAlignment="Left"/>
+        <Button Grid.Column="4" Grid.Row="6" Content="ВЫЙТИ" FontSize="24"
+                FontFamily="Times New Roman" Width="150" Foreground="#30615F"
+                Background="{x:Null}" BorderThickness="0" Height="50"/>
+
+    </Grid>
+
+</Window>
